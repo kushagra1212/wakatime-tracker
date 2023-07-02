@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Wakatime Tracker",
+    "version": "1.0",
+    "description": "Measure coding time and send information to Wakatime",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://leetcode.com/*",
+                "https://www.geeksforgeeks.org/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_title": "Measure coding time and send information to Wakatime"
+    }
+}
