@@ -7,14 +7,11 @@
         "activeTab",
         "scripting"
     ],
-    "background": {
-        "service_worker": "background.js"
-    },
     "content_scripts": [
         {
             "matches": [
                 "https://leetcode.com/*",
-                "https://www.geeksforgeeks.org/*"
+                "https://practice.geeksforgeeks.org/*"
             ],
             "js": [
                 "content.js"
@@ -23,5 +20,9 @@
     ],
     "action": {
         "default_title": "Measure coding time and send information to Wakatime"
-    }
+    } , "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
 }
